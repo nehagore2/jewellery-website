@@ -1,0 +1,1384 @@
+/* =========================================
+   DIVINE DESIGNS
+   LUXURY JEWELLERY HERO SECTION
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #ebe7df;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: #ebe7df;
+}
+
+
+/* =========================================
+   CREAMY WHITE LUXURY BACKGROUND
+========================================= */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f5ee 0%,
+            #d3cfc4 45%,
+            #eee9df 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   SOFT BACKGROUND OVERLAY
+========================================= */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.luxury-header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+
+    color: #403b35;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #403b35;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    cursor: pointer;
+}
+
+
+.menu-icon {
+    font-family: Arial, sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   HEADER RIGHT ICONS
+========================================= */
+
+.header-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.header-icons a {
+    text-decoration: none;
+
+    color: #403b35;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.header-icons a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.hero-title {
+    position: absolute;
+
+    top: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: max-content;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(75px, 8.8vw, 145px);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -6px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.hero-content {
+    position: absolute;
+
+    left: 5%;
+
+    top: 41%;
+
+    z-index: 6;
+
+    width: 410px;
+
+    color: #3c3731;
+}
+
+
+/* =========================================
+   COLLECTION TITLE
+========================================= */
+
+.hero-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(25px, 2vw, 32px);
+
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    line-height: 1.2;
+
+    margin-bottom: 28px;
+
+    color: #39342f;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-content p {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: #403a34;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   DISCOVER BUTTON
+========================================= */
+
+.discover-button {
+    border: none;
+
+    background: #171414;
+
+    color: #ffffff;
+
+    padding: 18px 38px;
+
+    min-width: 200px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.discover-button:hover {
+    background: #3c3834;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HAND IMAGE
+========================================= */
+
+/* =================================
+   HERO HAND - FINAL POSITION
+================================= */
+
+.hero-hand {
+    position: absolute;
+
+    /* Move hand toward center */
+    right: 27%;
+
+    /* Make hand bigger */
+    bottom: -90px;
+    height: 90vh;
+
+    width: auto;
+    max-width: none;
+
+    object-fit: contain;
+
+    z-index: 3;
+    pointer-events: none;
+}
+/* =========================================
+   RIGHT CATEGORY LIST
+========================================= */
+
+.hero-categories {
+    position: absolute;
+
+    right: 5%;
+
+    top: 53%;
+
+    z-index: 6;
+
+    width: 24%;
+
+    min-width: 300px;
+
+    max-width: 400px;
+}
+
+
+/* =========================================
+   CATEGORY LINKS
+========================================= */
+
+.hero-categories a {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(70, 65, 58, 0.35);
+
+    text-decoration: none;
+
+    color: #4b443d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+
+    transition:
+        padding-left 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Last border */
+
+.hero-categories a:last-child {
+    border-bottom: 1px solid rgba(70, 65, 58, 0.35);
+}
+
+
+/* Arrow */
+
+.hero-categories a span:last-child {
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    letter-spacing: 0;
+}
+
+
+/* Hover */
+
+.hero-categories a:hover {
+    padding-left: 10px;
+
+    color: #171414;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-title {
+        font-size: 90px;
+
+        top: 45px;
+    }
+
+    .hero-content {
+        left: 5%;
+
+        width: 360px;
+    }
+
+    .hero-content h2 {
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-hand {
+        left: 37%;
+
+        height: 72vh;
+    }
+
+    .hero-categories {
+        right: 4%;
+
+        width: 23%;
+
+        min-width: 240px;
+    }
+
+    .hero-categories a {
+        font-size: 15px;
+
+        padding: 16px 0;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 850px;
+
+        height: auto;
+
+        padding-bottom: 50px;
+    }
+
+
+    /* Header */
+
+    .luxury-header {
+        height: 65px;
+
+        padding: 0 6%;
+    }
+
+
+    .menu-button {
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+
+    .menu-icon {
+        font-size: 21px;
+    }
+
+
+    .header-icons {
+        gap: 15px;
+    }
+
+
+    .header-icons a {
+        font-size: 21px;
+    }
+
+
+    /* Title */
+
+    .hero-title {
+        top: 70px;
+
+        font-size: clamp(55px, 15vw, 90px);
+
+        letter-spacing: -4px;
+
+        line-height: 0.84;
+    }
+
+
+    /* Left content */
+
+    .hero-content {
+        top: 270px;
+
+        left: 7%;
+
+        width: 86%;
+    }
+
+
+    .hero-content h2 {
+        font-size: 24px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .hero-content p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Hand */
+
+    .hero-hand {
+        left: 25%;
+
+        bottom: 110px;
+
+        height: 48vh;
+
+        opacity: 0.95;
+    }
+
+
+    /* Categories */
+
+    .hero-categories {
+        top: auto;
+
+        bottom: 30px;
+
+        left: 7%;
+
+        width: 86%;
+
+        min-width: 0;
+
+        max-width: none;
+    }
+
+
+    .hero-categories a {
+        padding: 11px 0;
+
+        font-size: 13px;
+
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 820px;
+    }
+
+
+    .hero-title {
+        font-size: 55px;
+
+        top: 75px;
+    }
+
+
+    .hero-content {
+        top: 245px;
+    }
+
+
+    .hero-content h2 {
+        font-size: 20px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+
+    .discover-button {
+        padding: 14px 28px;
+
+        min-width: 170px;
+    }
+
+
+    .hero-hand {
+        left: 18%;
+
+        bottom: 135px;
+
+        height: 40vh;
+    }
+
+
+    .hero-categories a {
+        font-size: 12px;
+
+        padding: 9px 0;
+    }
+
+}
+/* =========================================
+   ABOUT US SECTION
+========================================= */
+
+.about-section {
+    background: #f8f6f0;
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 50px;
+    min-height: 430px;
+    align-items: start;
+}
+
+/* Large ABOUT US heading */
+
+.about-title h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(70px, 9vw, 125px);
+    line-height: 0.78;
+    font-weight: 400;
+    letter-spacing: -5px;
+    color: #dedbd3;
+}
+
+/* About text */
+
+.about-content {
+    max-width: 600px;
+    padding-top: 8px;
+}
+
+.about-content p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b4741;
+    margin-bottom: 25px;
+}
+
+.about-content .about-intro {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   OUR MOST LOVED CREATIONS
+========================================= */
+
+.loved-section {
+    background: #f8f6f0;
+    padding: 80px 7% 100px;
+}
+
+/* Large heading */
+
+.loved-heading {
+    margin-bottom: 45px;
+}
+
+.loved-heading p {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.78;
+    font-weight: 400;
+    letter-spacing: -4px;
+    color: #dedbd3;
+}
+
+
+/* Jewellery grid */
+
+.loved-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #d8d2c8;
+    border-left: 1px solid #d8d2c8;
+}
+
+
+/* Product card */
+
+.loved-card {
+    background: #f8f6f0;
+    border-right: 1px solid #d8d2c8;
+    border-bottom: 1px solid #d8d2c8;
+    overflow: hidden;
+}
+
+
+/* Product image */
+
+.loved-image {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background: #eeeae2;
+}
+
+.loved-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+/* Image hover */
+
+.loved-card:hover .loved-image img {
+    transform: scale(1.06);
+}
+
+
+/* Product information */
+
+.loved-info {
+    padding: 18px 15px 22px;
+}
+
+.loved-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3e3933;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.loved-info p {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #777169;
+    margin: 0 0 10px;
+}
+
+.loved-info span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    color: #3e3933;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.loved-card {
+    transition: background 0.3s ease;
+}
+
+.loved-card:hover {
+    background: #f1eee7;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 70px 7%;
+    }
+
+    .about-title h2 {
+        font-size: 75px;
+    }
+
+    .loved-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+    .about-section {
+        padding: 60px 6%;
+    }
+
+    .about-title h2 {
+        font-size: 65px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .loved-section {
+        padding: 60px 6%;
+    }
+
+    .loved-heading p {
+        font-size: 55px;
+    }
+
+    .loved-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .loved-image {
+        height: 300px;
+    }
+
+}
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about-section {
+    background: #f8f6ef;
+    min-height: 650px;
+    padding: 120px 7%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.about-title h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(90px, 10vw, 160px);
+    line-height: 0.78;
+    font-weight: 400;
+    letter-spacing: -6px;
+    color: #dedbd3;
+}
+
+.about-content {
+    padding-top: 15px;
+    padding-right: 5%;
+}
+
+.about-content p {
+    margin: 0 0 55px;
+    max-width: 720px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #292623;
+}
+
+
+/* =====================================================
+   MODEL SECTION
+===================================================== */
+
+.about-model {
+    background: #f8f6ef;
+    padding: 20px 7% 120px;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 60px;
+}
+
+.model-image {
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.model-image:hover img {
+    transform: scale(1.03);
+}
+
+
+.model-text {
+    padding: 40px;
+}
+
+.model-text span {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #77716a;
+}
+
+.model-text h3 {
+    margin: 25px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 400;
+    color: #292623;
+}
+
+.model-text p {
+    max-width: 420px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #514c47;
+}
+
+
+/* =====================================================
+   MOST LOVED CREATIONS
+===================================================== */
+
+.featured-jewellery {
+    background: #f8f6ef;
+    padding: 80px 7% 140px;
+}
+
+.featured-heading h2 {
+    margin: 0 0 70px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(75px, 9vw, 145px);
+    line-height: 0.82;
+    font-weight: 400;
+    letter-spacing: -5px;
+
+    color: #dedbd3;
+}
+
+
+/* =====================================================
+   TWO JEWELLERY CARDS
+===================================================== */
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+
+    border-top: 1px solid #d8d4cb;
+    border-left: 1px solid #d8d4cb;
+}
+
+.featured-card {
+    display: block;
+
+    text-decoration: none;
+    color: inherit;
+
+    background: #f8f6ef;
+
+    border-right: 1px solid #d8d4cb;
+    border-bottom: 1px solid #d8d4cb;
+
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Jewellery image */
+
+.featured-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.featured-card:hover .featured-image img {
+    transform: scale(1.04);
+}
+
+
+/* Jewellery details */
+
+.featured-info {
+    padding: 25px 22px 30px;
+}
+
+.featured-info h3 {
+    margin: 0 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    color: #292623;
+}
+
+.featured-info p {
+    margin: 0 0 12px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: #716b64;
+}
+
+.featured-info span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    color: #292623;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        padding: 80px 6%;
+    }
+
+    .about-title {
+        margin-bottom: 60px;
+    }
+
+    .about-title h2 {
+        font-size: 100px;
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .about-content p {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+
+    .about-model {
+        grid-template-columns: 1fr;
+        padding: 20px 6% 80px;
+        gap: 30px;
+    }
+
+    .model-image {
+        height: 550px;
+    }
+
+    .model-text {
+        padding: 20px 0;
+    }
+
+    .model-text h3 {
+        font-size: 40px;
+    }
+
+
+    .featured-jewellery {
+        padding: 70px 6% 100px;
+    }
+
+    .featured-heading h2 {
+        font-size: 80px;
+        margin-bottom: 50px;
+    }
+
+    .featured-products {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        height: 500px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 70px 5%;
+    }
+
+    .about-title h2 {
+        font-size: 75px;
+        letter-spacing: -3px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .about-model {
+        padding: 10px 5% 70px;
+    }
+
+    .model-image {
+        height: 430px;
+    }
+
+    .model-text h3 {
+        font-size: 34px;
+    }
+
+    .model-text p {
+        font-size: 15px;
+    }
+
+    .featured-jewellery {
+        padding: 60px 5% 80px;
+    }
+
+    .featured-heading h2 {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+
+    .featured-image {
+        height: 400px;
+    }
+
+    .featured-info h3 {
+        font-size: 18px;
+    }
+}
+/* ================================
+   ABOUT SECTION - SMALL MODEL
+================================ */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 80px;
+    padding: 80px 7% 10px;
+    background: #f7f5ef;
+    align-items: start;
+}
+
+.about-left {
+    position: relative;
+}
+
+.about-left h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(80px, 10vw, 150px);
+    line-height: 0.78;
+    font-weight: 400;
+    color: #ddd9d0;
+    letter-spacing: -5px;
+}
+
+/* Small model image below ABOUT US */
+
+.about-model {
+    width: 550px;
+    height: 500px;
+    margin-top: 45px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.about-model img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* About text */
+
+.about-text {
+    padding-top: 15px;
+    max-width: 700px;
+}
+
+.about-text p {
+    margin: 0 0 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #292929;
+}
+
+
+/* ================================
+   JEWELLERY COLLECTION
+   SMALLER IMAGES
+================================ */
+
+.collection-section {
+    padding: 10px 7% 100px;
+    background: #f7f5ef;
+}
+
+.collection-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(70px, 9vw, 140px);
+    line-height: 0.82;
+    font-weight: 400;
+    color: #ddd9d0;
+    margin: 0 0 70px;
+    max-width: 650px;
+}
+
+
+/* Jewellery grid */
+
+.jewellery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.jewellery-card {
+    background: #f7f5ef;
+    border: 1px solid #dedbd3;
+    overflow: hidden;
+}
+
+
+/* Make jewellery images smaller */
+
+.jewellery-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Product information */
+
+.jewellery-card .product-info {
+    padding: 20px;
+}
+
+.jewellery-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.jewellery-card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 12px;
+}
+
+.jewellery-card .price {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    color: #222;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        padding: 70px 6%;
+        gap: 40px;
+    }
+
+    .about-left h2 {
+        font-size: 80px;
+    }
+
+    .about-model {
+        width: 180px;
+        height: 230px;
+        margin-left: 0;
+    }
+
+    .about-text {
+        padding-top: 0;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .collection-section {
+        padding: 60px 6%;
+    }
+
+    .collection-section h2 {
+        font-size: 70px;
+        margin-bottom: 45px;
+    }
+
+    .jewellery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jewellery-card img {
+        height: 180px;
+    }
+}
+
+/* Reduce gap before Our Most Loved section */
+.most-loved {
+    margin-top: 0px !important;
+    padding-top: 0 !important;
+}
+
+/* Reduce space after jewellery cards */
+.products-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
