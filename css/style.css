@@ -2,7 +2,22 @@
    DIVINE DESIGNS
    LUXURY JEWELLERY HERO SECTION
 ========================================= */
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 600px) {
+    .product-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .product-card img {
+        height: 400px;
+    }
+}
 
 /* =========================================
    RESET
@@ -35,7 +50,7 @@ body {
 
     width: 100%;
     height: 100vh;
-    min-height: 700px;
+    min-height: 620px;
 
     overflow: hidden;
 
@@ -284,6 +299,9 @@ body {
     transition:
         background 0.3s ease,
         transform 0.3s ease;
+text-decoration: none;
+display: inline-block;
+text-align: center;
 }
 
 
@@ -1381,4 +1399,634 @@ body {
 .products-section {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+}
+/* =====================================================
+   FINAL RESPONSIVE FIX
+   ===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 800px;
+        height: auto;
+    }
+
+    .hero-title {
+        font-size: clamp(65px, 11vw, 100px);
+        width: 100%;
+        white-space: normal;
+    }
+
+    .hero-content {
+        width: 42%;
+        left: 6%;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-hand {
+        right: 20%;
+        height: 60vh;
+    }
+
+    .hero-categories {
+        right: 5%;
+        width: 28%;
+        min-width: 200px;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 70px 7%;
+    }
+
+    .about-title h2 {
+        font-size: clamp(70px, 12vw, 110px);
+    }
+
+    .about-model {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        margin: 30px 0 0;
+    }
+
+    .about-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-content p {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    /* MOST LOVED */
+
+    .loved-section {
+        padding: 70px 6%;
+    }
+
+    .loved-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .loved-image {
+        height: 280px;
+    }
+
+    /* FEATURED */
+
+    .featured-jewellery {
+        padding: 70px 6% 90px;
+    }
+
+    .featured-products {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        height: 450px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+
+    .luxury-header {
+        height: 60px;
+        padding: 0 5%;
+    }
+
+    .menu-button {
+        font-size: 11px;
+        gap: 7px;
+    }
+
+    .menu-icon {
+        font-size: 20px;
+    }
+
+    .header-icons {
+        gap: 12px;
+    }
+
+    .header-icons a {
+        font-size: 20px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 820px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .hero-title {
+        top: 75px;
+        left: 50%;
+        width: 100%;
+        font-size: clamp(48px, 15vw, 75px);
+        letter-spacing: -3px;
+        line-height: .85;
+        white-space: normal;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 230px;
+        left: 7%;
+        width: 86%;
+    }
+
+    .hero-content h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .hero-content p br {
+        display: none;
+    }
+
+    .discover-button {
+        min-width: 160px;
+        padding: 14px 25px;
+        font-size: 12px;
+    }
+
+    /* HAND */
+
+    .hero-hand {
+        left: 15%;
+        right: auto;
+        bottom: 145px;
+        height: 38vh;
+        max-width: 75%;
+    }
+
+    /* CATEGORY LINKS */
+
+    .hero-categories {
+        left: 7%;
+        right: auto;
+        bottom: 25px;
+        top: auto;
+        width: 86%;
+        min-width: 0;
+    }
+
+    .hero-categories a {
+        padding: 9px 0;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        display: block;
+        padding: 60px 6%;
+        min-height: auto;
+    }
+
+    .about-title {
+        margin-bottom: 30px;
+    }
+
+    .about-title h2 {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+
+    .about-model {
+        width: 100%;
+        max-width: 300px;
+        height: 360px;
+        margin: 30px auto 0;
+    }
+
+    .about-content {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+
+    /* FEATURED JEWELLERY */
+
+    .featured-jewellery {
+        padding: 55px 6% 70px;
+    }
+
+    .featured-products {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        height: 350px;
+    }
+
+    .featured-info {
+        padding: 20px;
+    }
+
+    .featured-info h3 {
+        font-size: 18px;
+    }
+
+
+    /* MOST LOVED */
+
+    .loved-section {
+        padding: 55px 6% 70px;
+    }
+
+    .loved-heading {
+        margin-bottom: 35px;
+    }
+
+    .loved-heading p {
+        font-size: clamp(45px, 14vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .loved-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .loved-image {
+        height: 330px;
+    }
+
+    .loved-info {
+        padding: 18px;
+    }
+
+    .loved-info h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* ================================
+   VERY SMALL PHONES
+   ================================ */
+
+@media (max-width: 380px) {
+
+    .hero {
+        min-height: 780px;
+    }
+
+    .hero-title {
+        font-size: 45px;
+    }
+
+    .hero-content {
+        top: 215px;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-hand {
+        height: 34vh;
+        bottom: 150px;
+    }
+
+    .hero-categories a {
+        font-size: 10px;
+    }
+
+    .about-title h2 {
+        font-size: 55px;
+    }
+
+    .featured-image {
+        height: 300px;
+    }
+
+    .loved-image {
+        height: 280px;
+    }
+}
+/* =========================================
+   CATEGORY PAGES
+========================================= */
+
+.category-header {
+    width: 100%;
+    padding: 25px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f6ef;
+    border-bottom: 1px solid #d8d4cb;
+}
+
+.category-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #3e3933;
+}
+
+.back-home {
+    text-decoration: none;
+    color: #3e3933;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.back-home:hover {
+    opacity: 0.6;
+}
+
+
+/* CATEGORY MAIN */
+
+.category-page {
+    min-height: 100vh;
+    background: #f8f6ef;
+    padding: 80px 7%;
+}
+
+
+/* CATEGORY HEADING */
+
+.category-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.category-heading p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #77716a;
+    margin-bottom: 20px;
+}
+
+.category-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(60px, 9vw, 120px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -4px;
+    color: #dedbd3;
+    margin-bottom: 25px;
+}
+
+.category-heading span {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #5c5751;
+}
+
+
+/* PRODUCT GRID */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* PRODUCT CARD */
+
+.category-card {
+    background: #f8f6ef;
+    border: 1px solid #d8d4cb;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* IMAGE */
+
+.category-image {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    background: #eeeae2;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.05);
+}
+
+
+/* PRODUCT DETAILS */
+
+.category-info {
+    padding: 22px;
+}
+
+.category-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3e3933;
+    margin-bottom: 10px;
+}
+
+.category-info p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #77716a;
+    margin-bottom: 12px;
+}
+
+.category-info span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    color: #3e3933;
+}
+
+
+/* =========================================
+   CATEGORY RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+.category-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+
+@media (max-width: 600px) {
+
+    .category-header {
+        padding: 20px 6%;
+    }
+
+    .category-header h1 {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .back-home {
+        font-size: 11px;
+    }
+
+    .category-page {
+        padding: 50px 6%;
+    }
+
+    .category-heading {
+        margin-bottom: 45px;
+    }
+
+    .category-heading h2 {
+        font-size: 55px;
+        letter-spacing: -2px;
+    }
+
+    .category-heading span {
+        font-size: 13px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .category-image {
+        height: 330px;
+    }
+}
+/* Mobile */
+@media (max-width: 600px) {
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 25px;
+    }
+
+    .category-image {
+        height: 380px;
+    }
+
+    .category-info {
+        padding: 18px;
+    }
+
+    .category-info h3 {
+        font-size: 18px;
+    }
+
+    .category-info p {
+        font-size: 14px;
+    }
+
+    .category-info span {
+        font-size: 18px;
+    }
+}
+/* Tablet */
+@media (max-width: 900px) {
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 92%;
+    }
+
+    .category-image {
+        height: 400px;
+    }
+
+}
+/* Mobile */
+@media (max-width: 600px) {
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 25px;
+    }
+
+    .category-image {
+        height: 380px;
+    }
+
+    .category-info {
+        padding: 20px;
+    }
+
+    .category-info h3 {
+        font-size: 18px;
+    }
+
 }
