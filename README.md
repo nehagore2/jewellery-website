@@ -67,3 +67,14 @@ Divine-Designs/
 │   └── bracelet images
 │
 └── README.md
+🚀 Deployment
+
+The project is hosted using GitHub Pages.
+
+Repository:
+
+https://github.com/nehagore2/jewellery-website
+
+👩‍💻 Author
+
+Neha Gore
