@@ -2,117 +2,1015 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Necklaces | Divine Designs</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================================
+           PRODUCT IMAGE ACTION BUTTONS
+        ========================================== */
+
+        .category-image {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .product-actions {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+            z-index: 10;
+
+        }
+
+
+        .product-action {
+
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            color: #302c27;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 17px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.12);
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        .product-action:hover {
+
+            background: #302c27;
+
+            color: #ffffff;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .product-action.wishlist-active {
+
+            background: #302c27;
+
+            color: #ffffff;
+
+        }
+
+
+        .product-action:active {
+
+            transform: scale(0.92);
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 768px) {
+
+            .product-actions {
+
+                top: 10px;
+
+                right: 10px;
+
+                gap: 7px;
+
+            }
+
+
+            .product-action {
+
+                width: 36px;
+
+                height: 36px;
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
     <header class="category-header">
-        <a href="index.html" class="back-home">← HOME</a>
-        <h1>DIVINE DESIGNS</h1>
+
+        <a href="index.html"
+            class="back-home">
+
+            ← HOME
+
+        </a>
+
+
+        <h1>
+
+            DIVINE DESIGNS
+
+        </h1>
+
     </header>
+
+
+
+    <!-- =========================================
+         NECKLACES PAGE
+    ========================================== -->
 
     <main class="category-page">
 
+
+        <!-- PAGE HEADING -->
+
         <div class="category-heading">
-            <p>SPECIAL COLLECTION</p>
-            <h2>NECKLACES</h2>
-            <span>Elegant necklaces for every occasion</span>
+
+            <p>
+
+                SPECIAL COLLECTION
+
+            </p>
+
+
+            <h2>
+
+                NECKLACES
+
+            </h2>
+
+
+            <span>
+
+                Elegant necklaces for every occasion
+
+            </span>
+
         </div>
+
+
+
+        <!-- =========================================
+             PRODUCT GRID
+        ========================================== -->
 
         <div class="category-grid">
 
-            <!-- Necklace 1 -->
+
+
+            <!-- =====================================
+                 NECKLACE 1
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/necklace1.jpg" alt="Spiral Chain Necklace">
+
+
+                    <img
+                        src="images/necklace1.jpg"
+                        alt="Spiral Chain Necklace"
+                    >
+
+
+                    <!-- ACTION BUTTONS -->
+
+                    <div class="product-actions">
+
+
+                        <!-- HEART -->
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'SPIRAL CHAIN NECKLACE',
+                                '14K yellow gold',
+                                '$1,250',
+                                'images/necklace1.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+
+                        <!-- CART -->
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'SPIRAL CHAIN NECKLACE',
+                                '14K yellow gold',
+                                '$1,250',
+                                'images/necklace1.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>SPIRAL CHAIN NECKLACE</h3>
-                    <p>14K yellow gold</p>
-                    <span>$1,250</span>
+
+                    <h3>
+
+                        SPIRAL CHAIN NECKLACE
+
+                    </h3>
+
+
+                    <p>
+
+                        14K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $1,250
+
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Necklace 2 -->
+
+            <!-- =====================================
+                 NECKLACE 2
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/necklace2.jpg" alt="Golden Raindrop Necklace">
+
+
+                    <img
+                        src="images/necklace2.jpg"
+                        alt="Golden Raindrop Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'GOLDEN RAINDROP NECKLACE',
+                                '14K yellow gold',
+                                '$920',
+                                'images/necklace2.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'GOLDEN RAINDROP NECKLACE',
+                                '14K yellow gold',
+                                '$920',
+                                'images/necklace2.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>GOLDEN RAINDROP NECKLACE</h3>
-                    <p>14K yellow gold</p>
-                    <span>$920</span>
+
+                    <h3>
+
+                        GOLDEN RAINDROP NECKLACE
+
+                    </h3>
+
+
+                    <p>
+
+                        14K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $920
+
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Necklace 3 -->
+
+            <!-- =====================================
+                 NECKLACE 3
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/necklace3.jpg" alt="Celestial Necklace">
+
+
+                    <img
+                        src="images/necklace3.jpg"
+                        alt="Celestial Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'CELESTIAL NECKLACE',
+                                '14K yellow gold',
+                                '$980',
+                                'images/necklace3.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'CELESTIAL NECKLACE',
+                                '14K yellow gold',
+                                '$980',
+                                'images/necklace3.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>CELESTIAL NECKLACE</h3>
-                    <p>14K yellow gold</p>
-                    <span>$980</span>
+
+                    <h3>
+
+                        CELESTIAL NECKLACE
+
+                    </h3>
+
+
+                    <p>
+
+                        14K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $980
+
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Necklace 4 -->
+
+            <!-- =====================================
+                 NECKLACE 4
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/necklace4.jpg" alt="Ornate Gold Necklace">
+
+
+                    <img
+                        src="images/necklace4.jpg"
+                        alt="Ornate Gold Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'ORNATE GOLD NECKLACE',
+                                '14K yellow gold',
+                                '$5,500',
+                                'images/necklace4.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'ORNATE GOLD NECKLACE',
+                                '14K yellow gold',
+                                '$5,500',
+                                'images/necklace4.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>ORNATE GOLD NECKLACE</h3>
-                    <p>12K yellow gold</p>
-                    <span>$5,500</span>
+
+                    <h3>
+
+                        ORNATE GOLD NECKLACE
+
+                    </h3>
+
+
+                    <p>
+
+                        14K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $5,500
+
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Necklace 5 -->
+
+            <!-- =====================================
+                 NECKLACE 5
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/necklace5.jpg" alt="Pendant Chain Necklace">
+
+
+                    <img
+                        src="images/necklace5.jpg"
+                        alt="Golden Pendant Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'GOLDEN PENDANT NECKLACE',
+                                '12K yellow gold',
+                                '$1,500',
+                                'images/necklace5.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'GOLDEN PENDANT NECKLACE',
+                                '12K yellow gold',
+                                '$1,500',
+                                'images/necklace5.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>PENDANT CHAIN NECKLACE</h3>
-                    <p>5K Diamond Chain</p>
-                    <span>$1,250</span>
+
+                    <h3>
+
+                        GOLDEN PENDANT NECKLACE
+
+                    </h3>
+
+
+                    <p>
+
+                        12K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $1,500
+
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Necklace 6 -->
+
+            <!-- =====================================
+                 NECKLACE 6
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/pendant1.jpg" alt="Silver Diamond Necklace">
+
+
+                    <img
+                        src="images/necklace6.jpg"
+                        alt="Turquoise Statement Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'TURQUOISE STATEMENT NECKLACE',
+                                '14K gold',
+                                '$4,200',
+                                'images/necklace6.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'TURQUOISE STATEMENT NECKLACE',
+                                '14K gold',
+                                '$4,200',
+                                'images/necklace6.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>PENDANT CHAIN NECKLACE</h3>
-                    <p>13K silver Diamond</p>
-                    <span>$850</span>
+
+                    <h3>
+
+                        TURQUOISE STATEMENT NECKLACE
+
+                    </h3>
+
+
+                    <p>
+
+                        14K gold
+
+                    </p>
+
+
+                    <span>
+
+                        $4,200
+
+                    </span>
+
                 </div>
+
             </div>
+
 
         </div>
 
     </main>
 
+
+
+    <!-- =========================================
+         WISHLIST + CART JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           ADD TO WISHLIST
+        ========================================== */
+
+        function addToWishlist(
+            name,
+            material,
+            price,
+            image
+        ) {
+
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("wishlist")
+                ) || [];
+
+
+            /* Check if already added */
+
+            const alreadyExists =
+                wishlist.some(function (item) {
+
+                    return (
+                        item.name === name &&
+                        item.image === image
+                    );
+
+                });
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This item is already in your wishlist."
+                );
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            wishlist.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image
+
+            });
+
+
+            /* Save wishlist */
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            alert(
+                "Added to Wishlist ❤️"
+            );
+
+        }
+
+
+
+        /* =========================================
+           ADD TO CART
+        ========================================== */
+
+        function addToCart(
+            name,
+            material,
+            price,
+            image
+        ) {
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            /* Check if already added */
+
+            const alreadyExists =
+                cart.some(function (item) {
+
+                    return (
+                        item.name === name &&
+                        item.image === image
+                    );
+
+                });
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This item is already in your cart."
+                );
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            cart.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image,
+
+                quantity: 1
+
+            });
+
+
+            /* Save cart */
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            alert(
+                "Added to Cart 🛒"
+            );
+
+        }
+
+
+
+        /* =========================================
+           SHOW SAVED WISHLIST HEART
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const wishlist =
+                    JSON.parse(
+                        localStorage.getItem("wishlist")
+                    ) || [];
+
+
+                document
+                    .querySelectorAll(".wishlist-btn")
+                    .forEach(function (button) {
+
+
+                        const onclickValue =
+                            button.getAttribute(
+                                "onclick"
+                            );
+
+
+                        if (!onclickValue) {
+
+                            return;
+
+                        }
+
+
+                        wishlist.forEach(
+                            function (item) {
+
+
+                                if (
+                                    onclickValue.includes(
+                                        item.name
+                                    )
+                                ) {
+
+
+                                    button.classList.add(
+                                        "wishlist-active"
+                                    );
+
+
+                                    const icon =
+                                        button.querySelector(
+                                            "i"
+                                        );
+
+
+                                    if (icon) {
+
+                                        icon.classList.remove(
+                                            "fa-regular"
+                                        );
+
+                                        icon.classList.add(
+                                            "fa-solid"
+                                        );
+
+                                    }
+
+                                }
+
+                            }
+                        );
+
+                    });
+
+            }
+        );
+
+
+    </script>
+    <!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>DIVINE<br>DESIGNS</h2>
+            <p>
+                Timeless jewellery crafted with elegance,
+                beauty and sophistication.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+
+            <a href="profile.html">Profile</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+
+            <p>📧 info@divinedesigns.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📍 Pune, Maharashtra, India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Divine Designs. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
 </body>
+
 </html>

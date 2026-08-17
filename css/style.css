@@ -1912,7 +1912,6 @@ img {
    CATEGORY RESPONSIVE
 ========================================= */
 
-@media (max-width: 900px) {
 .category-grid {
     width: 90%;
     max-width: 1400px;
@@ -1923,6 +1922,7 @@ img {
     gap: 32px;
 }
 
+} /* ← ADD THIS */
 
 @media (max-width: 600px) {
 
@@ -1965,6 +1965,7 @@ img {
         height: 330px;
     }
 }
+
 /* Mobile */
 @media (max-width: 600px) {
 
@@ -2029,4 +2030,672 @@ img {
         font-size: 18px;
     }
 
+}
+
+/* =========================================
+   LUXURY MENU DROPDOWN
+========================================= */
+
+.menu-dropdown {
+    position: relative;
+}
+
+.menu-dropdown .menu-button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.menu-options {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 210px;
+    padding: 12px 0;
+    background: #f8f6ef;
+    border: 1px solid #d8d4cb;
+    box-shadow: 0 10px 30px rgba(50, 45, 40, 0.12);
+
+    display: none;
+    z-index: 100;
+}
+
+.menu-options a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #403b35;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        padding-left 0.3s ease,
+        color 0.3s ease;
+}
+
+.menu-options a:hover {
+    background: #ebe7df;
+    padding-left: 25px;
+    color: #171414;
+}
+
+.menu-dropdown:hover .menu-options {
+    display: block;
+}
+/* MENU FIX */
+.menu-dropdown {
+    position: relative !important;
+}
+
+.menu-options {
+    display: none !important;
+    position: absolute !important;
+    top: 40px !important;
+    left: 0 !important;
+    width: 220px !important;
+    background: #f8f6ef !important;
+    padding: 10px 0 !important;
+    z-index: 9999 !important;
+}
+
+.menu-options a {
+    display: block !important;
+    padding: 12px 20px !important;
+    color: #403b35 !important;
+    text-decoration: none !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 13px !important;
+    letter-spacing: 2px !important;
+}
+
+.menu-dropdown:hover .menu-options {
+    display: block !important;
+}
+/* =========================
+   HEADER ICONS
+========================= */
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.icon-link {
+    color: #302c27;
+    font-size: 27px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #a67c52;
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   SIMPLE PAGE HEADER
+========================= */
+
+.simple-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    border-bottom: 1px solid #ddd6cc;
+}
+
+.logo {
+    color: #302c27;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 0.8;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.back-home {
+    color: #302c27;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.back-home:hover {
+    color: #a67c52;
+}
+
+
+/* =========================
+   PAGE SECTION
+========================= */
+
+.page-section {
+    min-height: 70vh;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.page-section h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    color: #302c27;
+}
+
+.page-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   EMPTY WISHLIST / CART
+========================= */
+
+.empty-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 60px 30px;
+    border: 1px solid #ddd6cc;
+}
+
+.empty-box i {
+    font-size: 50px;
+    color: #a67c52;
+    margin-bottom: 20px;
+}
+
+.empty-box h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.empty-box p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.page-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #181615;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.page-button:hover {
+    background: #a67c52;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #ddd6cc;
+}
+
+.profile-icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+    color: #a67c52;
+}
+
+.profile-box h2 {
+    font-family: Georgia, serif;
+}
+
+.profile-box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.profile-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.profile-box input {
+    padding: 14px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.profile-box button {
+    padding: 14px;
+    background: #181615;
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.profile-box button:hover {
+    background: #a67c52;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    width: 250px;
+    padding: 35px 25px;
+    border: 1px solid #ddd6cc;
+}
+
+.contact-item i {
+    font-size: 35px;
+    color: #a67c52;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #ddd6cc;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .simple-header {
+        padding: 20px;
+    }
+
+    .page-section {
+        padding: 50px 20px;
+    }
+
+    .page-section h1 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .header-icons {
+        gap: 12px;
+    }
+
+    .icon-link {
+        font-size: 22px;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+}
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #1d1b19;
+    color: #f5f1ea;
+    margin-top: 80px;
+    padding-top: 60px;
+}
+
+.footer-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+/* Brand */
+
+.footer-brand h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    letter-spacing: 5px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+}
+
+.footer-brand p {
+    color: #c8c1b8;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 280px;
+}
+
+/* Footer headings */
+
+.footer-column h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+/* Footer links */
+
+.footer-column a {
+    display: block;
+    color: #c8c1b8;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+/* Contact text */
+
+.footer-column p {
+    color: #c8c1b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+/* Bottom copyright */
+
+.footer-bottom {
+    border-top: 1px solid #3a3734;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #aaa39b;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   FOOTER RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 35px;
+    }
+
+    .site-footer {
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+
+}
+/* =========================================
+   DIVINE DESIGNS - PREMIUM ANIMATIONS
+   ========================================= */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Page fade-in */
+body {
+    animation: pageFadeIn 0.8s ease-in-out;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   BUTTON HOVER EFFECT
+   ========================================= */
+
+button,
+.discover-btn,
+a {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+button:hover,
+.discover-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   HEADER ICONS
+   ========================================= */
+
+header i,
+.header-icons i,
+.nav-icons i {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+header i:hover,
+.header-icons i:hover,
+.nav-icons i:hover {
+    transform: translateY(-3px) scale(1.08);
+}
+
+
+/* =========================================
+   MENU LINKS
+   ========================================= */
+
+a:hover {
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   PRODUCT CARDS
+   ========================================= */
+
+.product-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Product images */
+.product-card img {
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   COLLECTION / CATEGORY LINKS
+   ========================================= */
+
+.category-item,
+.collection-item {
+    transition:
+        transform 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+.category-item:hover,
+.collection-item:hover {
+    transform: translateX(6px);
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   HERO IMAGE
+   ========================================= */
+
+.hero img,
+.hero-section img {
+    transition: transform 0.8s ease;
+}
+
+.hero:hover img,
+.hero-section:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   CONTACT CARDS
+   ========================================= */
+
+.contact-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   PROFILE CARD
+   ========================================= */
+
+.profile-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   FORM INPUTS
+   ========================================= */
+
+input {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   FOOTER LINKS
+   ========================================= */
+
+footer a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

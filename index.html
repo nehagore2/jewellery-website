@@ -7,14 +7,88 @@
 
     <title>Divine Designs | Luxury Jewellery</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================
+           PRODUCT IMAGE ACTION BUTTONS
+        ========================================= */
+
+        .loved-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .product-action {
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            color: #302c27;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .product-action:hover {
+            background: #302c27;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .product-action.wishlist-active {
+            background: #302c27;
+            color: #ffffff;
+        }
+
+        .product-action:active {
+            transform: scale(0.92);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .product-actions {
+                top: 10px;
+                right: 10px;
+                gap: 7px;
+            }
+
+            .product-action {
+                width: 36px;
+                height: 36px;
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <!-- =========================
+    <!-- =========================================
          HERO SECTION
-    ========================== -->
+    ========================================== -->
 
     <section class="hero">
 
@@ -22,27 +96,83 @@
         <div class="hero-background"></div>
 
 
-        <!-- =========================
+        <!-- =========================================
              TOP HEADER
-        ========================== -->
+        ========================================== -->
 
         <header class="luxury-header">
 
-            <!-- Left Menu -->
-            <a href="about.html" class="menu-button">
-                <span class="menu-icon">☰</span>
-                <span>MENU</span>
-            </a>
+            <!-- Menu -->
+            <div class="menu-dropdown">
 
-            <!-- Right Icons -->
+                <button class="menu-button" type="button">
+                    <span class="menu-icon">☰</span>
+                    <span>MENU</span>
+                </button>
+
+                <div class="menu-options">
+
+                    <a href="index.html">HOME</a>
+
+                    <a href="about.html">ABOUT US</a>
+
+                    <a href="collection.html">COLLECTION</a>
+
+                    <a href="rings.html">RINGS</a>
+
+                    <a href="earrings.html">EARRINGS</a>
+
+                    <a href="necklaces.html">NECKLACES</a>
+
+                    <a href="bracelets.html">BRACELETS</a>
+
+                    <a href="contact.html">CONTACT</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Header Icons -->
             <div class="header-icons">
 
-                <a href="collection.html" aria-label="Shopping bag">
-                    ♧
+                <!-- Wishlist -->
+                <a href="wishlist.html"
+                    class="icon-link"
+                    title="Wishlist">
+
+                    <i class="fa-regular fa-heart"></i>
+
                 </a>
 
-                <a href="contact.html" aria-label="Contact">
-                    ♙
+
+                <!-- Cart -->
+                <a href="cart.html"
+                    class="icon-link"
+                    title="Shopping Cart">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </a>
+
+
+                <!-- Profile -->
+                <a href="profile.html"
+                    class="icon-link"
+                    title="Profile">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </a>
+
+
+                <!-- Contact -->
+                <a href="contact.html"
+                    class="icon-link"
+                    title="Contact">
+
+                    <i class="fa-regular fa-envelope"></i>
+
                 </a>
 
             </div>
@@ -50,20 +180,24 @@
         </header>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              MAIN TITLE
-        ========================== -->
+        ========================================== -->
 
         <h1 class="hero-title">
+
             DIVINE
             <br>
             DESIGNS
+
         </h1>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              LEFT CONTENT
-        ========================== -->
+        ========================================== -->
 
         <div class="hero-content">
 
@@ -71,23 +205,40 @@
                 COLLECTION 2026
             </h2>
 
+
             <p>
-                Discover our latest jewellery collection,<br>
-                crafted with elegance and timeless beauty.<br>
-                Each piece is designed to celebrate your<br>
-                most precious moments with grace and<br>
+
+                Discover our latest jewellery collection,
+                <br>
+
+                crafted with elegance and timeless beauty.
+                <br>
+
+                Each piece is designed to celebrate your
+                <br>
+
+                most precious moments with grace and
+                <br>
+
                 sophistication.
+
             </p>
 
-            <a href="#loved" class="discover-button">
-                 DISCOVER →
+
+            <a href="#loved"
+                class="discover-button">
+
+                DISCOVER →
+
             </a>
+
         </div>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              HAND IMAGE
-        ========================== -->
+        ========================================== -->
 
         <img
             src="images/hand.png"
@@ -96,271 +247,829 @@
         >
 
 
-        <!-- =========================
+
+        <!-- =========================================
              RIGHT CATEGORIES
-        ========================== -->
+        ========================================== -->
 
         <div class="hero-categories">
 
-            
-        <div class="hero-categories">
+            <a href="rings.html">
 
-    <a href="rings.html">
-        <span>RINGS</span>
-        <span>→</span>
-    </a>
+                <span>RINGS</span>
 
-    <a href="earrings.html">
-        <span>EARRINGS</span>
-        <span>→</span>
-    </a>
+                <span>→</span>
 
-    <a href="necklaces.html">
-        <span>NECKLACES</span>
-        <span>→</span>
-    </a>
+            </a>
 
-    <a href="bracelets.html">
-        <span>BRACELETS</span>
-        <span>→</span>
-    </a>
 
-</div>
+            <a href="earrings.html">
+
+                <span>EARRINGS</span>
+
+                <span>→</span>
+
+            </a>
+
+
+            <a href="necklaces.html">
+
+                <span>NECKLACES</span>
+
+                <span>→</span>
+
+            </a>
+
+
+            <a href="bracelets.html">
+
+                <span>BRACELETS</span>
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         OUR MOST LOVED CREATIONS
+    ========================================== -->
+
+    <section class="loved-section"
+        id="loved">
+
+
+        <div class="loved-heading">
+
+            <p>OUR MOST</p>
+
+            <p>LOVED</p>
+
+            <p>CREATIONS</p>
+
+        </div>
+
+
+
+        <div class="loved-grid">
+
+
+            <!-- =================================
+                 PRODUCT 1
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/ring2.jpg"
+                        alt="Hexa Gold Ring"
+                    >
+
+
+                    <!-- Action Buttons -->
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'HEXA GOLD RING',
+                                '14K yellow gold',
+                                '$450',
+                                'images/ring2.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'HEXA GOLD RING',
+                                '14K yellow gold',
+                                '$450',
+                                'images/ring2.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>HEXA GOLD RING</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$450</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 2
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/necklace1.jpg"
+                        alt="Spiral Chain Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'SPIRAL CHAIN NECKLACE',
+                                '14K yellow gold',
+                                '$1,250',
+                                'images/necklace1.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'SPIRAL CHAIN NECKLACE',
+                                '14K yellow gold',
+                                '$1,250',
+                                'images/necklace1.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>SPIRAL CHAIN NECKLACE</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$1,250</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 3
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/earrings1.jpg"
+                        alt="Celestial Spark Pendant"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'CELESTIAL SPARK PENDANT',
+                                '14K yellow gold',
+                                '$1,250',
+                                'images/earrings1.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'CELESTIAL SPARK PENDANT',
+                                '14K yellow gold',
+                                '$1,250',
+                                'images/earrings1.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>CELESTIAL SPARK PENDANT</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$1,250</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 4
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/bracelet1.jpg"
+                        alt="Pearl Halo Pendant"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'PEARL HALO PENDANT',
+                                '14K yellow gold',
+                                '$480',
+                                'images/bracelet1.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'PEARL HALO PENDANT',
+                                '14K yellow gold',
+                                '$480',
+                                'images/bracelet1.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>PEARL HALO PENDANT</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$480</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 5
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/necklace3.jpg"
+                        alt="Hexa Gold Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'HEXA GOLD RING',
+                                '14K yellow gold',
+                                '$450',
+                                'images/necklace3.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'HEXA GOLD RING',
+                                '14K yellow gold',
+                                '$450',
+                                'images/necklace3.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>HEXA GOLD RING</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$450</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 6
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/earrings2.jpg"
+                        alt="Solar Radiance Earrings"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'SOLAR RADIANCE EARRINGS',
+                                '18K yellow gold',
+                                '$680',
+                                'images/earrings2.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'SOLAR RADIANCE EARRINGS',
+                                '18K yellow gold',
+                                '$680',
+                                'images/earrings2.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>SOLAR RADIANCE EARRINGS</h3>
+
+                    <p>18K yellow gold</p>
+
+                    <span>$680</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 7
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/necklace2.jpg"
+                        alt="Golden Raindrop Necklace"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'GOLDEN RAINDROP NECKLACE',
+                                '14K yellow gold',
+                                '$920',
+                                'images/necklace2.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'GOLDEN RAINDROP NECKLACE',
+                                '14K yellow gold',
+                                '$920',
+                                'images/necklace2.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>GOLDEN RAINDROP NECKLACE</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$920</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 8
+            ================================== -->
+
+            <div class="loved-card">
+
+                <div class="loved-image">
+
+                    <img
+                        src="images/necklace4.jpg"
+                        alt="Ornate Twist Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'ORNATE TWIST RING',
+                                '14K yellow gold',
+                                '$520',
+                                'images/necklace4.jpg'
+                            )">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'ORNATE TWIST RING',
+                                '14K yellow gold',
+                                '$520',
+                                'images/necklace4.jpg'
+                            )">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="loved-info">
+
+                    <h3>ORNATE TWIST RING</h3>
+
+                    <p>14K yellow gold</p>
+
+                    <span>$520</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         WISHLIST + CART
+    ========================================== -->
+
+    <script>
+
+        /* =========================================
+           ADD TO WISHLIST
+        ========================================== */
+
+        function addToWishlist(name, material, price, image) {
+
+            let wishlist =
+                JSON.parse(localStorage.getItem("wishlist")) || [];
+
+
+            /* Check if product already exists */
+
+            const alreadyExists = wishlist.some(function (item) {
+
+                return item.name === name &&
+                       item.image === image;
+
+            });
+
+
+            if (alreadyExists) {
+
+                alert("This item is already in your wishlist.");
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            wishlist.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image
+
+            });
+
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            alert("Added to Wishlist ❤️");
+
+        }
+
+
+
+        /* =========================================
+           ADD TO CART
+        ========================================== */
+
+        function addToCart(name, material, price, image) {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+
+            /* Check if product already exists */
+
+            const alreadyExists = cart.some(function (item) {
+
+                return item.name === name &&
+                       item.image === image;
+
+            });
+
+
+            if (alreadyExists) {
+
+                alert("This item is already in your cart.");
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            cart.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image,
+
+                quantity: 1
+
+            });
+
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            alert("Added to Cart 🛒");
+
+        }
+
+
+
+        /* =========================================
+           SHOW SAVED WISHLIST HEARTS
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const wishlist =
+                    JSON.parse(
+                        localStorage.getItem("wishlist")
+                    ) || [];
+
+
+                document
+                    .querySelectorAll(".wishlist-btn")
+                    .forEach(function (button) {
+
+                        const onclickValue =
+                            button.getAttribute("onclick");
+
+
+                        if (!onclickValue) {
+                            return;
+                        }
+
+
+                        wishlist.forEach(function (item) {
+
+                            if (
+                                onclickValue.includes(item.name)
+                            ) {
+
+                                button.classList.add(
+                                    "wishlist-active"
+                                );
+
+                                const icon =
+                                    button.querySelector("i");
+
+                                if (icon) {
+
+                                    icon.classList.remove(
+                                        "fa-regular"
+                                    );
+
+                                    icon.classList.add(
+                                        "fa-solid"
+                                    );
+
+                                }
+
+                            }
+
+                        });
+
+                    });
+
+            }
+        );
+
+    </script>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>DIVINE<br>DESIGNS</h2>
+            <p>
+                Timeless jewellery crafted with elegance,
+                beauty and sophistication.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+
+            <a href="profile.html">Profile</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+
+            <p>📧 info@divinedesigns.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📍 Pune, Maharashtra, India</p>
+        </div>
 
     </div>
 
-</section>
-    <!-- ================= ABOUT SECTION ================= -->
-
-<section class="about-section">
-
-    <div class="about-title">
-        <h2>ABOUT<br>US</h2>
-        <div class="about-model">
-    <img src="images/model.jpg" alt="Jewellery Model">
-</div>
+    <div class="footer-bottom">
+        <p>© 2026 Divine Designs. All Rights Reserved.</p>
     </div>
 
-    <div class="about-content">
-
-        <p>
-            At Divine Designs, we believe that jewellery is more than an accessory —
-            it is a timeless expression of elegance, individuality, and unforgettable moments.
-        </p>
-
-        <p>
-            We carefully select the finest materials, precious metals, sparkling gemstones,
-            and luxurious pearls to create every piece. Each design is thoughtfully crafted
-            with attention to detail, bringing together modern beauty and timeless sophistication.
-        </p>
-
-        <p>
-            Our collection is created for those who appreciate elegance, quality,
-            and jewellery that can be cherished for generations.
-        </p>
-        <p>
-            Every Divine Designs creation is designed with delicate details,
-            refined craftsmanship, and a timeless sense of beauty.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ================= FEATURED JEWELLERY ================= -->
-
-<section class="featured-jewellery">
-
-
-    <div class="featured-products">
-
-        <!-- Necklace -->
-
-        <a href="collection.html" class="featured-card">
-
-            <div class="featured-image">
-                <img src="images/necklace2.jpg" alt="Luxury Necklace">
-            </div>
-
-            <div class="featured-info">
-                <h3>CELESTIAL NECKLACE</h3>
-                <p>14K yellow gold</p>
-                <span>$920</span>
-    
-
-            </div>
-
-        </a>
-
-
-        <!-- Bracelet -->
-
-        <a href="#" class="featured-card">
-
-            <div class="featured-image">
-                <img src="images/necklace5.jpg" alt="Luxury Bracelet">
-            </div>
-
-            <div class="featured-info">
-                <h3>ETERNAL BRACELET</h3>
-                <p>14K yellow gold</p>
-                <span>$680</span>
-            </div>
-
-        </a>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     OUR MOST LOVED CREATIONS
-========================= -->
-
-<section class="loved-section" id="loved">
-
-    <div class="loved-heading">
-        <p>OUR MOST</p>
-        <p>LOVED</p>
-        <p>CREATIONS</p>
-    </div>
-
-
-    <div class="loved-grid">
-
-        <!-- Product 1 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/pendant1.jpg" alt="Elegant Gold Ring">
-            </div>
-
-            <div class="loved-info">
-                <h3>ETERNAL BAND RING</h3>
-                <p>14K yellow gold</p>
-                <span>$320</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 2 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/necklace1.jpg" alt="Gold Chain Necklace">
-            </div>
-
-            <div class="loved-info">
-                <h3>SPIRAL CHAIN NECKLACE</h3>
-                <p>14K yellow gold</p>
-                <span>$1,250</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 3 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/earrings1.jpg" alt="Gold Pendant">
-            </div>
-
-            <div class="loved-info">
-                <h3>CELESTIAL SPARK PENDANT</h3>
-                <p>14K yellow gold</p>
-                <span>$1,250</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 4 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/bracelet1.jpg" alt="Pearl Pendant">
-            </div>
-
-            <div class="loved-info">
-                <h3>PEARL HALO PENDANT</h3>
-                <p>14K yellow gold</p>
-                <span>$480</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 5 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/necklace3.jpg" alt="Hexa Gold Ring">
-            </div>
-
-            <div class="loved-info">
-                <h3>HEXA GOLD RING</h3>
-                <p>14K yellow gold</p>
-                <span>$450</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 6 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/earrings2.jpg" alt="Gold Earrings">
-            </div>
-
-            <div class="loved-info">
-                <h3>SOLAR RADIANCE EARRINGS</h3>
-                <p>18K yellow gold</p>
-                <span>$680</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 7 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/necklace2.jpg" alt="Diamond Necklace">
-            </div>
-
-            <div class="loved-info">
-                <h3>GOLDEN RAINDROP NECKLACE</h3>
-                <p>14K yellow gold</p>
-                <span>$920</span>
-            </div>
-
-        </div>
-
-
-        <!-- Product 8 -->
-        <div class="loved-card">
-
-            <div class="loved-image">
-                <img src="images/necklace4.jpg" alt="Ornate Gold Ring">
-            </div>
-
-            <div class="loved-info">
-                <h3>ORNATE TWIST RING</h3>
-                <p>14K yellow gold</p>
-                <span>$520</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+</footer>
 
 </body>
+
 </html>

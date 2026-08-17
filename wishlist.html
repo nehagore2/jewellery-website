@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Wishlist | Divine Designs</title>
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            background: #ebe7df;
+
+            color: #302c27;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================== */
+
+        .simple-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 25px 6%;
+
+            border-bottom: 1px solid #d8d2c8;
+
+            background: #f8f6ef;
+
+        }
+
+
+        .logo {
+
+            color: #302c27;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            line-height: 0.8;
+
+            text-decoration: none;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .back-home {
+
+            color: #302c27;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .back-home:hover {
+
+            color: #a67c52;
+
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================== */
+
+        .wishlist-page {
+
+            min-height: 75vh;
+
+            padding: 80px 6%;
+
+            text-align: center;
+
+        }
+
+
+        .wishlist-page h1 {
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            letter-spacing: 7px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .page-description {
+
+            font-size: 18px;
+
+            color: #666;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        /* =========================================
+           WISHLIST GRID
+        ========================================== */
+
+        .wishlist-grid {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+
+            text-align: left;
+
+        }
+
+
+        /* =========================================
+           PRODUCT CARD
+        ========================================== */
+
+        .wishlist-card {
+
+            background: #f8f6ef;
+
+            border: 1px solid #d8d2c8;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .wishlist-image {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 330px;
+
+            overflow: hidden;
+
+        }
+
+
+        .wishlist-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.4s ease;
+
+        }
+
+
+        .wishlist-card:hover
+        .wishlist-image img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        /* =========================================
+           REMOVE HEART
+        ========================================== */
+
+        .remove-wishlist {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.95);
+
+            color: #302c27;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 17px;
+
+            box-shadow:
+                0 3px 10px
+                rgba(0,0,0,0.15);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .remove-wishlist:hover {
+
+            background: #302c27;
+
+            color: white;
+
+        }
+
+
+        /* =========================================
+           PRODUCT INFO
+        ========================================== */
+
+        .wishlist-info {
+
+            padding: 25px;
+
+        }
+
+
+        .wishlist-info h3 {
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .wishlist-info p {
+
+            color: #777;
+
+            font-size: 15px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .wishlist-price {
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            color: #302c27;
+
+        }
+
+
+        /* =========================================
+           ADD TO CART BUTTON
+        ========================================== */
+
+        .cart-button {
+
+            width: 100%;
+
+            margin-top: 20px;
+
+            padding: 13px;
+
+            border: none;
+
+            background: #191715;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            letter-spacing: 1.5px;
+
+            font-size: 13px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .cart-button:hover {
+
+            background: #a67c52;
+
+        }
+
+
+        /* =========================================
+           EMPTY WISHLIST
+        ========================================== */
+
+        .empty-wishlist {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+
+            background: #f8f6ef;
+
+            border: 1px solid #d8d2c8;
+
+        }
+
+
+        .empty-wishlist i {
+
+            font-size: 55px;
+
+            color: #a67c52;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .empty-wishlist h2 {
+
+            font-size: 30px;
+
+            font-weight: 400;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .empty-wishlist p {
+
+            color: #666;
+
+            font-size: 17px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        /* =========================================
+           EXPLORE BUTTON
+        ========================================== */
+
+        .wishlist-button {
+
+            display: inline-block;
+
+            padding: 16px 32px;
+
+            background: #181615;
+
+            color: white;
+
+            text-decoration: none;
+
+            letter-spacing: 2px;
+
+            font-size: 13px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .wishlist-button:hover {
+
+            background: #a67c52;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-top: 1px solid #d8d2c8;
+
+            background: #f8f6ef;
+
+            color: #666;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            .wishlist-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .simple-header {
+
+                padding: 20px;
+
+            }
+
+
+            .logo {
+
+                font-size: 22px;
+
+            }
+
+
+            .back-home {
+
+                font-size: 12px;
+
+            }
+
+
+            .wishlist-page {
+
+                padding: 60px 20px;
+
+            }
+
+
+            .wishlist-page h1 {
+
+                font-size: 32px;
+
+                letter-spacing: 4px;
+
+            }
+
+
+            .page-description {
+
+                font-size: 16px;
+
+            }
+
+
+            .wishlist-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .wishlist-image {
+
+                height: 300px;
+
+            }
+
+
+            .empty-wishlist {
+
+                padding: 50px 20px;
+
+            }
+
+
+            .empty-wishlist h2 {
+
+                font-size: 24px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="simple-header">
+
+        <a href="index.html"
+            class="logo">
+
+            DIVINE<br>
+            DESIGNS
+
+        </a>
+
+
+        <a href="index.html"
+            class="back-home">
+
+            ← Back to Home
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================================
+         WISHLIST
+    ========================================== -->
+
+    <main class="wishlist-page">
+
+
+        <h1>
+            MY WISHLIST
+        </h1>
+
+
+        <p class="page-description">
+
+            Your favourite jewellery pieces will appear here.
+
+        </p>
+
+
+        <!-- PRODUCTS WILL BE INSERTED HERE -->
+
+        <div
+            id="wishlistContainer"
+            class="wishlist-grid">
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Divine Designs. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           LOAD WISHLIST
+        ========================================== */
+
+        function loadWishlist() {
+
+
+            const container =
+                document.getElementById(
+                    "wishlistContainer"
+                );
+
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("wishlist")
+                ) || [];
+
+
+            /* =====================================
+               EMPTY WISHLIST
+            ====================================== */
+
+            if (wishlist.length === 0) {
+
+
+                container.className =
+                    "empty-wishlist";
+
+
+                container.innerHTML = `
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <h2>
+                        Your Wishlist is Empty
+                    </h2>
+
+                    <p>
+                        Save your favourite jewellery pieces here.
+                    </p>
+
+                    <a
+                        href="index.html"
+                        class="wishlist-button"
+                    >
+                        EXPLORE COLLECTION →
+                    </a>
+
+                `;
+
+
+                return;
+
+            }
+
+
+
+            /* =====================================
+               PRODUCT GRID
+            ====================================== */
+
+            container.className =
+                "wishlist-grid";
+
+
+            container.innerHTML = "";
+
+
+            wishlist.forEach(
+                function (item, index) {
+
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.className =
+                        "wishlist-card";
+
+
+                    card.innerHTML = `
+
+                        <div class="wishlist-image">
+
+                            <img
+                                src="${item.image}"
+                                alt="${item.name}"
+                            >
+
+                            <button
+                                class="remove-wishlist"
+                                title="Remove from Wishlist"
+                                onclick="removeFromWishlist(${index})"
+                            >
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="wishlist-info">
+
+                            <h3>
+                                ${item.name}
+                            </h3>
+
+                            <p>
+                                ${item.material}
+                            </p>
+
+                            <div class="wishlist-price">
+                                ${item.price}
+                            </div>
+
+
+                            <button
+                                class="cart-button"
+                                onclick="moveToCart(${index})"
+                            >
+
+                                ADD TO CART
+
+                            </button>
+
+                        </div>
+
+                    `;
+
+
+                    container.appendChild(card);
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           REMOVE FROM WISHLIST
+        ========================================== */
+
+        function removeFromWishlist(index) {
+
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("wishlist")
+                ) || [];
+
+
+            wishlist.splice(index, 1);
+
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            loadWishlist();
+
+        }
+
+
+
+        /* =========================================
+           MOVE WISHLIST ITEM TO CART
+        ========================================== */
+
+        function moveToCart(index) {
+
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("wishlist")
+                ) || [];
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            const item =
+                wishlist[index];
+
+
+            /* Check if already in cart */
+
+            const alreadyInCart =
+                cart.some(function (cartItem) {
+
+                    return (
+                        cartItem.name === item.name &&
+                        cartItem.image === item.image
+                    );
+
+                });
+
+
+            if (alreadyInCart) {
+
+                alert(
+                    "This item is already in your cart."
+                );
+
+                return;
+
+            }
+
+
+            /* Add quantity */
+
+            item.quantity = 1;
+
+
+            /* Add to cart */
+
+            cart.push(item);
+
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            /* Remove from wishlist */
+
+            wishlist.splice(index, 1);
+
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            alert(
+                "Added to Cart 🛒"
+            );
+
+
+            loadWishlist();
+
+        }
+
+
+
+        /* =========================================
+           LOAD WHEN PAGE OPENS
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadWishlist();
+
+            }
+        );
+
+
+    </script>
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>DIVINE<br>DESIGNS</h2>
+            <p>
+                Timeless jewellery crafted with elegance,
+                beauty and sophistication.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+
+            <a href="profile.html">Profile</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+
+            <p>📧 info@divinedesigns.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📍 Pune, Maharashtra, India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Divine Designs. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+</body>
+
+</html>

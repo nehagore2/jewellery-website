@@ -7,73 +7,854 @@
 
     <title>Special Rings | Divine Designs</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================
+           PRODUCT IMAGE ACTION BUTTONS
+        ========================================== */
+
+        .category-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .product-action {
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            color: #302c27;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .product-action:hover {
+            background: #302c27;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .product-action.wishlist-active {
+            background: #302c27;
+            color: #ffffff;
+        }
+
+        .product-action:active {
+            transform: scale(0.92);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .product-actions {
+                top: 10px;
+                right: 10px;
+                gap: 7px;
+            }
+
+            .product-action {
+                width: 36px;
+                height: 36px;
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <header class="category-header">
-        <a href="index.html" class="back-home">← HOME</a>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
-        <h1>DIVINE DESIGNS</h1>
+    <header class="category-header">
+
+        <a href="index.html" class="back-home">
+            ← HOME
+        </a>
+
+        <h1>
+            DIVINE DESIGNS
+        </h1>
+
     </header>
 
 
+
+    <!-- =========================================
+         RINGS PAGE
+    ========================================== -->
+
     <main class="category-page">
 
+
+        <!-- PAGE HEADING -->
+
         <div class="category-heading">
-            <p>SPECIAL COLLECTION</p>
-            <h2>RINGS</h2>
-            <span>Timeless rings crafted with elegance</span>
+
+            <p>
+                SPECIAL COLLECTION
+            </p>
+
+            <h2>
+                RINGS
+            </h2>
+
+            <span>
+                Timeless rings crafted with elegance
+            </span>
+
         </div>
 
 
+
+        <!-- =========================================
+             PRODUCT GRID
+        ========================================== -->
+
         <div class="category-grid">
 
-            <!-- Ring 1 -->
+
+            <!-- =====================================
+                 RING 1
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/model.jpg" alt="Eternal Band Ring">
+
+                    <img
+                        src="images/ring1.jpg"
+                        alt="Elegant Diamond Ring"
+                    >
+
+
+                    <!-- ACTION BUTTONS -->
+
+                    <div class="product-actions">
+
+                        <!-- Wishlist -->
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'ETERNAL DIAMOND RING',
+                                '12K yellow gold',
+                                '$320',
+                                'images/ring1.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <!-- Cart -->
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'ETERNAL DIAMOND RING',
+                                '12K yellow gold',
+                                '$320',
+                                'images/ring1.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>ETERNAL BAND RING</h3>
-                    <p>14K yellow gold</p>
-                    <span>$320</span>
+
+                    <h3>
+                        ETERNAL DIAMOND RING
+                    </h3>
+
+                    <p>
+                        12K yellow gold
+                    </p>
+
+                    <span>
+                        $320
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Ring 2 -->
+
+            <!-- =====================================
+                 RING 2
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/ring1.jpg" alt="Hexa Gold Ring">
+
+                    <img
+                        src="images/ring2.jpg"
+                        alt="Hexa Gold Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'HEXA GOLD RING',
+                                '14K yellow gold',
+                                '$450',
+                                'images/ring2.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'HEXA GOLD RING',
+                                '14K yellow gold',
+                                '$450',
+                                'images/ring2.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>HEXA GOLD RING</h3>
-                    <p>14K yellow gold</p>
-                    <span>$450</span>
+
+                    <h3>
+                        HEXA GOLD RING
+                    </h3>
+
+                    <p>
+                        14K yellow gold
+                    </p>
+
+                    <span>
+                        $450
+                    </span>
+
                 </div>
+
             </div>
 
 
-            <!-- Ring 3 -->
+
+            <!-- =====================================
+                 RING 3
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/ring2.jpg" alt="Ornate Twist Ring">
+
+                    <img
+                        src="images/ring3.jpg"
+                        alt="Crystal Diamond Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'CRYSTAL DIAMOND RING',
+                                '15K white gold',
+                                '$520',
+                                'images/ring3.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'CRYSTAL DIAMOND RING',
+                                '15K white gold',
+                                '$520',
+                                'images/ring3.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>ORNATE TWIST RING</h3>
-                    <p>14K yellow gold</p>
-                    <span>$520</span>
+
+                    <h3>
+                        CRYSTAL DIAMOND RING
+                    </h3>
+
+                    <p>
+                        15K white gold
+                    </p>
+
+                    <span>
+                        $520
+                    </span>
+
                 </div>
+
             </div>
+
+
+
+            <!-- =====================================
+                 RING 4
+            ====================================== -->
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img
+                        src="images/ring4.jpg"
+                        alt="Classic Gold Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'CLASSIC GOLD RING',
+                                '14K yellow gold',
+                                '$480',
+                                'images/ring4.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'CLASSIC GOLD RING',
+                                '14K yellow gold',
+                                '$480',
+                                'images/ring4.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <h3>
+                        CLASSIC GOLD RING
+                    </h3>
+
+                    <p>
+                        14K yellow gold
+                    </p>
+
+                    <span>
+                        $480
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 RING 5
+            ====================================== -->
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img
+                        src="images/ring5.jpg"
+                        alt="Signature Diamond Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'SIGNATURE DIAMOND RING',
+                                '16K rose gold',
+                                '$590',
+                                'images/ring5.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'SIGNATURE DIAMOND RING',
+                                '16K rose gold',
+                                '$590',
+                                'images/ring5.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <h3>
+                        SIGNATURE DIAMOND RING
+                    </h3>
+
+                    <p>
+                        16K rose gold
+                    </p>
+
+                    <span>
+                        $590
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 RING 6
+            ====================================== -->
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img
+                        src="images/ring6.jpg"
+                        alt="Diamond Ring"
+                    >
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'DIAMOND RING',
+                                '17K white gold',
+                                '$650',
+                                'images/ring6.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'DIAMOND RING',
+                                '17K white gold',
+                                '$650',
+                                'images/ring6.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <h3>
+                        DIAMOND RING
+                    </h3>
+
+                    <p>
+                        17K white gold
+                    </p>
+
+                    <span>
+                        $650
+                    </span>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </main>
 
+
+
+    <!-- =========================================
+         WISHLIST + CART JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* =========================================
+           ADD TO WISHLIST
+        ========================================== */
+
+        function addToWishlist(
+            name,
+            material,
+            price,
+            image
+        ) {
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("wishlist")
+                ) || [];
+
+
+            /* Check duplicate */
+
+            const alreadyExists =
+                wishlist.some(function (item) {
+
+                    return (
+                        item.name === name &&
+                        item.image === image
+                    );
+
+                });
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This item is already in your wishlist."
+                );
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            wishlist.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image
+
+            });
+
+
+            /* Save */
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            alert(
+                "Added to Wishlist ❤️"
+            );
+
+        }
+
+
+
+        /* =========================================
+           ADD TO CART
+        ========================================== */
+
+        function addToCart(
+            name,
+            material,
+            price,
+            image
+        ) {
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            /* Check duplicate */
+
+            const alreadyExists =
+                cart.some(function (item) {
+
+                    return (
+                        item.name === name &&
+                        item.image === image
+                    );
+
+                });
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This item is already in your cart."
+                );
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            cart.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image,
+
+                quantity: 1
+
+            });
+
+
+            /* Save */
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            alert(
+                "Added to Cart 🛒"
+            );
+
+        }
+
+
+
+        /* =========================================
+           SHOW SAVED WISHLIST HEART
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const wishlist =
+                    JSON.parse(
+                        localStorage.getItem("wishlist")
+                    ) || [];
+
+
+                document
+                    .querySelectorAll(".wishlist-btn")
+                    .forEach(function (button) {
+
+                        const onclickValue =
+                            button.getAttribute(
+                                "onclick"
+                            );
+
+
+                        if (!onclickValue) {
+                            return;
+                        }
+
+
+                        wishlist.forEach(
+                            function (item) {
+
+                                if (
+                                    onclickValue.includes(
+                                        item.name
+                                    )
+                                ) {
+
+                                    button.classList.add(
+                                        "wishlist-active"
+                                    );
+
+
+                                    const icon =
+                                        button.querySelector(
+                                            "i"
+                                        );
+
+
+                                    if (icon) {
+
+                                        icon.classList.remove(
+                                            "fa-regular"
+                                        );
+
+                                        icon.classList.add(
+                                            "fa-solid"
+                                        );
+
+                                    }
+
+                                }
+
+                            }
+                        );
+
+                    });
+
+            }
+        );
+
+    </script>
+    <!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>DIVINE<br>DESIGNS</h2>
+            <p>
+                Timeless jewellery crafted with elegance,
+                beauty and sophistication.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+
+            <a href="profile.html">Profile</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+
+            <p>📧 info@divinedesigns.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📍 Pune, Maharashtra, India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Divine Designs. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
 </body>
+
 </html>

@@ -1,0 +1,270 @@
+/* =========================================
+   DIVINE DESIGNS - CONTACT PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #ebe7df;
+    color: #302c27;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.simple-header {
+    width: 100%;
+    padding: 25px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f8f6ef;
+    border-bottom: 1px solid #d8d2c8;
+}
+
+.logo {
+    color: #302c27;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    line-height: 0.85;
+    letter-spacing: 2px;
+}
+
+.back-home {
+    color: #302c27;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    color: #a67c52;
+}
+
+
+/* =========================================
+   CONTACT MAIN SECTION
+========================================= */
+
+.page-section {
+    min-height: 75vh;
+
+    padding: 80px 6%;
+}
+
+
+/* =========================================
+   CONTACT HEADING
+========================================= */
+
+.page-section > h1 {
+    text-align: center;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 18px;
+}
+
+.page-description {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 18px;
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================================
+   CONTACT BOX
+========================================= */
+
+.contact-box {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   CONTACT ITEM
+========================================= */
+
+.contact-item {
+    background: #f8f6ef;
+
+    border: 1px solid #d8d2c8;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(48, 44, 39, 0.08);
+}
+
+
+/* =========================================
+   CONTACT ICON
+========================================= */
+
+.contact-item i {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ebe7df;
+
+    color: #302c27;
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   CONTACT TITLE
+========================================= */
+
+.contact-item h3 {
+    font-size: 22px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   CONTACT TEXT
+========================================= */
+
+.contact-item p {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #f8f6ef;
+
+    border-top: 1px solid #d8d2c8;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .contact-box {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .simple-header {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .back-home {
+        font-size: 12px;
+    }
+
+    .page-section {
+        padding: 55px 20px;
+    }
+
+    .page-section > h1 {
+        font-size: 32px;
+
+        letter-spacing: 4px;
+    }
+
+    .page-description {
+        font-size: 15px;
+
+        margin-bottom: 35px;
+    }
+
+    .contact-item {
+        padding: 35px 20px;
+    }
+
+    .contact-item h3 {
+        font-size: 20px;
+    }
+
+}

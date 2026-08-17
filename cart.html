@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | Divine Designs</title>
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            background: #ebe7df;
+
+            color: #302c27;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================== */
+
+        .simple-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 25px 6%;
+
+            border-bottom: 1px solid #d8d2c8;
+
+            background: #f8f6ef;
+
+        }
+
+
+        .logo {
+
+            color: #302c27;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            line-height: 0.8;
+
+            text-decoration: none;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .back-home {
+
+            color: #302c27;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .back-home:hover {
+
+            color: #a67c52;
+
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================== */
+
+        .cart-page {
+
+            min-height: 75vh;
+
+            padding: 80px 6%;
+
+        }
+
+
+        .cart-page h1 {
+
+            text-align: center;
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            letter-spacing: 7px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .page-description {
+
+            text-align: center;
+
+            font-size: 18px;
+
+            color: #666;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        /* =========================================
+           CART LAYOUT
+        ========================================== */
+
+        .cart-layout {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 350px;
+
+            gap: 35px;
+
+            align-items: start;
+
+        }
+
+
+        /* =========================================
+           CART ITEMS
+        ========================================== */
+
+        .cart-items {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+
+        }
+
+
+        .cart-card {
+
+            display: grid;
+
+            grid-template-columns: 150px 1fr auto;
+
+            gap: 25px;
+
+            align-items: center;
+
+            background: #f8f6ef;
+
+            border: 1px solid #d8d2c8;
+
+            padding: 20px;
+
+        }
+
+
+        .cart-image {
+
+            width: 150px;
+
+            height: 150px;
+
+            overflow: hidden;
+
+        }
+
+
+        .cart-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        /* =========================================
+           CART PRODUCT INFO
+        ========================================== */
+
+        .cart-info h3 {
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .cart-info p {
+
+            color: #777;
+
+            font-size: 15px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .cart-price {
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================================
+           QUANTITY
+        ========================================== */
+
+        .quantity-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-top: 15px;
+
+        }
+
+
+        .quantity-box button {
+
+            width: 30px;
+
+            height: 30px;
+
+            border: 1px solid #cfc7bb;
+
+            background: #ebe7df;
+
+            color: #302c27;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+        }
+
+
+        .quantity-box span {
+
+            min-width: 20px;
+
+            text-align: center;
+
+        }
+
+
+        /* =========================================
+           REMOVE BUTTON
+        ========================================== */
+
+        .remove-button {
+
+            border: none;
+
+            background: transparent;
+
+            color: #777;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            padding: 10px;
+
+        }
+
+
+        .remove-button:hover {
+
+            color: #302c27;
+
+        }
+
+
+        /* =========================================
+           SUMMARY
+        ========================================== */
+
+        .cart-summary {
+
+            background: #f8f6ef;
+
+            border: 1px solid #d8d2c8;
+
+            padding: 30px;
+
+            position: sticky;
+
+            top: 20px;
+
+        }
+
+
+        .cart-summary h2 {
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .summary-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid #ddd6cc;
+
+            color: #555;
+
+        }
+
+
+        .summary-total {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 20px 0;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+        }
+
+
+        .checkout-button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            background: #191715;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .checkout-button:hover {
+
+            background: #a67c52;
+
+        }
+
+
+        /* =========================================
+           EMPTY CART
+        ========================================== */
+
+        .empty-cart {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+
+            text-align: center;
+
+            background: #f8f6ef;
+
+            border: 1px solid #d8d2c8;
+
+        }
+
+
+        .empty-cart i {
+
+            font-size: 55px;
+
+            color: #a67c52;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .empty-cart h2 {
+
+            font-size: 30px;
+
+            font-weight: 400;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .empty-cart p {
+
+            color: #666;
+
+            font-size: 17px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .shop-button {
+
+            display: inline-block;
+
+            padding: 16px 32px;
+
+            background: #181615;
+
+            color: white;
+
+            text-decoration: none;
+
+            letter-spacing: 2px;
+
+            font-size: 13px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .shop-button:hover {
+
+            background: #a67c52;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-top: 1px solid #d8d2c8;
+
+            background: #f8f6ef;
+
+            color: #666;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            .cart-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .cart-summary {
+
+                position: static;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .simple-header {
+
+                padding: 20px;
+
+            }
+
+
+            .logo {
+
+                font-size: 22px;
+
+            }
+
+
+            .back-home {
+
+                font-size: 12px;
+
+            }
+
+
+            .cart-page {
+
+                padding: 60px 20px;
+
+            }
+
+
+            .cart-page h1 {
+
+                font-size: 32px;
+
+                letter-spacing: 4px;
+
+            }
+
+
+            .page-description {
+
+                font-size: 16px;
+
+            }
+
+
+            .cart-card {
+
+                grid-template-columns: 100px 1fr;
+
+                gap: 15px;
+
+            }
+
+
+            .cart-image {
+
+                width: 100px;
+
+                height: 100px;
+
+            }
+
+
+            .remove-button {
+
+                grid-column: 2;
+
+                justify-self: end;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="simple-header">
+
+        <a href="index.html"
+            class="logo">
+
+            DIVINE<br>
+            DESIGNS
+
+        </a>
+
+
+        <a href="index.html"
+            class="back-home">
+
+            ← Back to Home
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CART
+    ========================================== -->
+
+    <main class="cart-page">
+
+
+        <h1>
+            SHOPPING CART
+        </h1>
+
+
+        <p class="page-description">
+
+            Review your selected jewellery pieces before checkout.
+
+        </p>
+
+
+        <!-- CART WILL LOAD HERE -->
+
+        <div id="cartContainer"></div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Divine Designs. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           LOAD CART
+        ========================================== */
+
+        function loadCart() {
+
+
+            const container =
+                document.getElementById(
+                    "cartContainer"
+                );
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            /* =====================================
+               EMPTY CART
+            ====================================== */
+
+            if (cart.length === 0) {
+
+
+                container.innerHTML = `
+
+                    <div class="empty-cart">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <h2>
+                            Your Cart is Empty
+                        </h2>
+
+                        <p>
+                            Add beautiful jewellery pieces to your cart.
+                        </p>
+
+                        <a
+                            href="index.html"
+                            class="shop-button"
+                        >
+                            SHOP NOW →
+                        </a>
+
+                    </div>
+
+                `;
+
+
+                return;
+
+            }
+
+
+
+            /* =====================================
+               CART LAYOUT
+            ====================================== */
+
+            container.innerHTML = `
+
+                <div class="cart-layout">
+
+                    <div
+                        id="cartItems"
+                        class="cart-items">
+                    </div>
+
+
+                    <div
+                        id="cartSummary"
+                        class="cart-summary">
+                    </div>
+
+                </div>
+
+            `;
+
+
+            displayCartItems();
+
+            displaySummary();
+
+        }
+
+
+
+        /* =========================================
+           DISPLAY CART ITEMS
+        ========================================== */
+
+        function displayCartItems() {
+
+
+            const itemsContainer =
+                document.getElementById(
+                    "cartItems"
+                );
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            itemsContainer.innerHTML = "";
+
+
+            cart.forEach(
+                function (item, index) {
+
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.className =
+                        "cart-card";
+
+
+                    card.innerHTML = `
+
+                        <div class="cart-image">
+
+                            <img
+                                src="${item.image}"
+                                alt="${item.name}"
+                            >
+
+                        </div>
+
+
+                        <div class="cart-info">
+
+                            <h3>
+                                ${item.name}
+                            </h3>
+
+                            <p>
+                                ${item.material}
+                            </p>
+
+                            <div class="cart-price">
+                                ${item.price}
+                            </div>
+
+
+                            <div class="quantity-box">
+
+                                <button
+                                    onclick="changeQuantity(${index}, -1)"
+                                >
+                                    −
+                                </button>
+
+                                <span>
+                                    ${item.quantity || 1}
+                                </span>
+
+                                <button
+                                    onclick="changeQuantity(${index}, 1)"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="remove-button"
+                            title="Remove from Cart"
+                            onclick="removeFromCart(${index})"
+                        >
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    `;
+
+
+                    itemsContainer.appendChild(card);
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           DISPLAY SUMMARY
+        ========================================== */
+
+        function displaySummary() {
+
+
+            const summary =
+                document.getElementById(
+                    "cartSummary"
+                );
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            let totalItems = 0;
+
+            let totalPrice = 0;
+
+
+            cart.forEach(
+                function (item) {
+
+
+                    const quantity =
+                        item.quantity || 1;
+
+
+                    totalItems += quantity;
+
+
+                    /*
+                     * Convert price such as
+                     * "$1,250" into number
+                     */
+
+                    const numericPrice =
+                        parseFloat(
+                            item.price
+                                .replace("$", "")
+                                .replace(/,/g, "")
+                        );
+
+
+                    totalPrice +=
+                        numericPrice * quantity;
+
+                }
+            );
+
+
+            summary.innerHTML = `
+
+                <h2>
+                    CART SUMMARY
+                </h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <span>
+                        ${totalItems}
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span>
+                        $${totalPrice.toLocaleString()}
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Shipping
+                    </span>
+
+                    <span>
+                        FREE
+                    </span>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <span>
+                        $${totalPrice.toLocaleString()}
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="checkout-button"
+                    onclick="checkout()"
+                >
+
+                    PROCEED TO CHECKOUT
+
+                </button>
+
+            `;
+
+        }
+
+
+
+        /* =========================================
+           CHANGE QUANTITY
+        ========================================== */
+
+        function changeQuantity(
+            index,
+            change
+        ) {
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            let currentQuantity =
+                cart[index].quantity || 1;
+
+
+            currentQuantity += change;
+
+
+            /* Minimum quantity = 1 */
+
+            if (currentQuantity < 1) {
+
+                currentQuantity = 1;
+
+            }
+
+
+            cart[index].quantity =
+                currentQuantity;
+
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            loadCart();
+
+        }
+
+
+
+        /* =========================================
+           REMOVE FROM CART
+        ========================================== */
+
+        function removeFromCart(index) {
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            cart.splice(index, 1);
+
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            loadCart();
+
+        }
+
+
+
+        /* =========================================
+           CHECKOUT
+        ========================================== */
+
+        function checkout() {
+
+
+            alert(
+                "Checkout feature coming soon."
+            );
+
+        }
+
+
+
+        /* =========================================
+           LOAD CART WHEN PAGE OPENS
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadCart();
+
+            }
+        );
+
+
+    </script>
+    <!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>DIVINE<br>DESIGNS</h2>
+            <p>
+                Timeless jewellery crafted with elegance,
+                beauty and sophistication.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+
+            <a href="profile.html">Profile</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+
+            <p>📧 info@divinedesigns.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📍 Pune, Maharashtra, India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Divine Designs. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

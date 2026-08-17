@@ -2,75 +2,1014 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Bracelets | Divine Designs</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================================
+           PRODUCT IMAGE ACTION BUTTONS
+        ========================================== */
+
+        .category-image {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .product-actions {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+            z-index: 10;
+
+        }
+
+
+        .product-action {
+
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            color: #302c27;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 17px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.12);
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        .product-action:hover {
+
+            background: #302c27;
+
+            color: #ffffff;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .product-action.wishlist-active {
+
+            background: #302c27;
+
+            color: #ffffff;
+
+        }
+
+
+        .product-action:active {
+
+            transform: scale(0.92);
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 768px) {
+
+            .product-actions {
+
+                top: 10px;
+
+                right: 10px;
+
+                gap: 7px;
+
+            }
+
+
+            .product-action {
+
+                width: 36px;
+
+                height: 36px;
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <header class="category-header">
-        <a href="index.html" class="back-home">← HOME</a>
 
-        <h1>DIVINE DESIGNS</h1>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="category-header">
+
+        <a href="index.html"
+            class="back-home">
+
+            ← HOME
+
+        </a>
+
+
+        <h1>
+
+            DIVINE DESIGNS
+
+        </h1>
+
     </header>
 
 
+
+    <!-- =========================================
+         BRACELETS PAGE
+    ========================================== -->
+
     <main class="category-page">
 
+
+        <!-- PAGE HEADING -->
+
         <div class="category-heading">
-            <p>SPECIAL COLLECTION</p>
-            <h2>BRACELETS</h2>
-            <span>Delicate bracelets designed to shine</span>
+
+            <p>
+
+                SPECIAL COLLECTION
+
+            </p>
+
+
+            <h2>
+
+                BRACELETS
+
+            </h2>
+
+
+            <span>
+
+                Delicate bracelets designed to shine
+
+            </span>
+
         </div>
 
 
+
+        <!-- =========================================
+             PRODUCT GRID
+        ========================================== -->
+
         <div class="category-grid">
 
+
+
+            <!-- =====================================
+                 BRACELET 1
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/bracelet1.jpg" alt="Pearl Bracelet">
+
+
+                    <img
+                        src="images/bracelet1.jpg"
+                        alt="Rose Gold Chain Bracelet"
+                    >
+
+
+                    <!-- ACTION BUTTONS -->
+
+                    <div class="product-actions">
+
+
+                        <!-- HEART -->
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'ROSE GOLD CHAIN BRACELET',
+                                '14K rose gold',
+                                '$480',
+                                'images/bracelet1.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+
+                        <!-- CART -->
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'ROSE GOLD CHAIN BRACELET',
+                                '14K rose gold',
+                                '$480',
+                                'images/bracelet1.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>PEARL HALO BRACELET</h3>
-                    <p>14K yellow gold</p>
-                    <span>$480</span>
+
+                    <h3>
+
+                        ROSE GOLD CHAIN BRACELET
+
+                    </h3>
+
+
+                    <p>
+
+                        14K rose gold
+
+                    </p>
+
+
+                    <span>
+
+                        $480
+
+                    </span>
+
                 </div>
+
             </div>
 
 
+
+            <!-- =====================================
+                 BRACELET 2
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/bracelet2.jpg" alt="Eternal Bracelet">
+
+
+                    <img
+                        src="images/bracelet2.jpg"
+                        alt="Eternal Diamond Bracelet"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'ETERNAL DIAMOND BRACELET',
+                                '14K yellow gold',
+                                '$680',
+                                'images/bracelet2.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'ETERNAL DIAMOND BRACELET',
+                                '14K yellow gold',
+                                '$680',
+                                'images/bracelet2.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>ETERNAL BRACELET</h3>
-                    <p>14K yellow gold</p>
-                    <span>$680</span>
+
+                    <h3>
+
+                        ETERNAL DIAMOND BRACELET
+
+                    </h3>
+
+
+                    <p>
+
+                        14K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $680
+
+                    </span>
+
                 </div>
+
             </div>
 
 
+
+            <!-- =====================================
+                 BRACELET 3
+            ====================================== -->
+
             <div class="category-card">
+
                 <div class="category-image">
-                    <img src="images/bracelate4.jpg" alt="Golden Charm Bracelet">
+
+
+                    <img
+                        src="images/bracelet3.jpg"
+                        alt="Classic Pearl Bracelet"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'CLASSIC PEARL BRACELET',
+                                '14K rose gold',
+                                '$620',
+                                'images/bracelet3.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'CLASSIC PEARL BRACELET',
+                                '14K rose gold',
+                                '$620',
+                                'images/bracelet3.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
                 </div>
 
+
                 <div class="category-info">
-                    <h3>GOLDEN CHARM BRACELET</h3>
-                    <p>18K yellow gold</p>
-                    <span>$750</span>
+
+                    <h3>
+
+                        CLASSIC PEARL BRACELET
+
+                    </h3>
+
+
+                    <p>
+
+                        14K rose gold
+
+                    </p>
+
+
+                    <span>
+
+                        $620
+
+                    </span>
+
                 </div>
+
             </div>
+
+
+
+            <!-- =====================================
+                 BRACELET 4
+            ====================================== -->
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+
+                    <img
+                        src="images/bracelet4.jpg"
+                        alt="Golden Elegance Bracelet"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'GOLDEN ELEGANCE BRACELET',
+                                '14K yellow gold',
+                                '$750',
+                                'images/bracelet4.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'GOLDEN ELEGANCE BRACELET',
+                                '14K yellow gold',
+                                '$750',
+                                'images/bracelet4.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <h3>
+
+                        GOLDEN ELEGANCE BRACELET
+
+                    </h3>
+
+
+                    <p>
+
+                        14K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $750
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BRACELET 5
+            ====================================== -->
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+
+                    <img
+                        src="images/bracelet5.jpg"
+                        alt="Emerald Charm Bracelet"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'EMERALD CHARM BRACELET',
+                                '18K yellow gold',
+                                '$820',
+                                'images/bracelet5.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'EMERALD CHARM BRACELET',
+                                '18K yellow gold',
+                                '$820',
+                                'images/bracelet5.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <h3>
+
+                        EMERALD CHARM BRACELET
+
+                    </h3>
+
+
+                    <p>
+
+                        18K yellow gold
+
+                    </p>
+
+
+                    <span>
+
+                        $820
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BRACELET 6
+            ====================================== -->
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+
+                    <img
+                        src="images/bracelet6.jpg"
+                        alt="Diamond Statement Bracelet"
+                    >
+
+
+                    <div class="product-actions">
+
+
+                        <button
+                            class="product-action wishlist-btn"
+                            title="Add to Wishlist"
+                            onclick="addToWishlist(
+                                'DIAMOND STATEMENT BRACELET',
+                                '18K white gold',
+                                '$950',
+                                'images/bracelet6.jpg'
+                            )"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="product-action"
+                            title="Add to Cart"
+                            onclick="addToCart(
+                                'DIAMOND STATEMENT BRACELET',
+                                '18K white gold',
+                                '$950',
+                                'images/bracelet6.jpg'
+                            )"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <h3>
+
+                        DIAMOND STATEMENT BRACELET
+
+                    </h3>
+
+
+                    <p>
+
+                        18K white gold
+
+                    </p>
+
+
+                    <span>
+
+                        $950
+
+                    </span>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </main>
 
+
+
+    <!-- =========================================
+         WISHLIST + CART JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           ADD TO WISHLIST
+        ========================================== */
+
+        function addToWishlist(
+            name,
+            material,
+            price,
+            image
+        ) {
+
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("wishlist")
+                ) || [];
+
+
+            /* Check duplicate */
+
+            const alreadyExists =
+                wishlist.some(function (item) {
+
+                    return (
+                        item.name === name &&
+                        item.image === image
+                    );
+
+                });
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This item is already in your wishlist."
+                );
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            wishlist.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image
+
+            });
+
+
+            /* Save */
+
+            localStorage.setItem(
+                "wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            alert(
+                "Added to Wishlist ❤️"
+            );
+
+        }
+
+
+
+        /* =========================================
+           ADD TO CART
+        ========================================== */
+
+        function addToCart(
+            name,
+            material,
+            price,
+            image
+        ) {
+
+
+            let cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+
+            /* Check duplicate */
+
+            const alreadyExists =
+                cart.some(function (item) {
+
+                    return (
+                        item.name === name &&
+                        item.image === image
+                    );
+
+                });
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This item is already in your cart."
+                );
+
+                return;
+
+            }
+
+
+            /* Add product */
+
+            cart.push({
+
+                name: name,
+
+                material: material,
+
+                price: price,
+
+                image: image,
+
+                quantity: 1
+
+            });
+
+
+            /* Save */
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+
+            alert(
+                "Added to Cart 🛒"
+            );
+
+        }
+
+
+
+        /* =========================================
+           SHOW SAVED WISHLIST HEART
+        ========================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const wishlist =
+                    JSON.parse(
+                        localStorage.getItem("wishlist")
+                    ) || [];
+
+
+                document
+                    .querySelectorAll(".wishlist-btn")
+                    .forEach(function (button) {
+
+
+                        const onclickValue =
+                            button.getAttribute(
+                                "onclick"
+                            );
+
+
+                        if (!onclickValue) {
+
+                            return;
+
+                        }
+
+
+                        wishlist.forEach(
+                            function (item) {
+
+
+                                if (
+                                    onclickValue.includes(
+                                        item.name
+                                    )
+                                ) {
+
+
+                                    button.classList.add(
+                                        "wishlist-active"
+                                    );
+
+
+                                    const icon =
+                                        button.querySelector(
+                                            "i"
+                                        );
+
+
+                                    if (icon) {
+
+                                        icon.classList.remove(
+                                            "fa-regular"
+                                        );
+
+                                        icon.classList.add(
+                                            "fa-solid"
+                                        );
+
+                                    }
+
+                                }
+
+                            }
+                        );
+
+                    });
+
+            }
+        );
+
+
+    </script>
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>DIVINE<br>DESIGNS</h2>
+            <p>
+                Timeless jewellery crafted with elegance,
+                beauty and sophistication.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Customer -->
+        <div class="footer-column">
+            <h3>MY ACCOUNT</h3>
+
+            <a href="profile.html">Profile</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>CONTACT US</h3>
+
+            <p>📧 info@divinedesigns.com</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📍 Pune, Maharashtra, India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Divine Designs. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
 </body>
+
 </html>
